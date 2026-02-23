@@ -11,9 +11,7 @@ This project introduces a novel Intelligent Wearable Creative Thinking Tracking 
 *   **Iterative Design Guidance:** Leverages XoT's MCTS to explore design modification `actions` and LLM's generative capabilities to provide structured, actionable feedback and revision suggestions, fostering an iterative design cycle.
 *   **Explainable AI for Design:** The framework provides not only quantitative scores but also qualitative insights (strengths, weaknesses, recommendations) and can conceptually trace the MCTS 'thought path`, enhancing the transparency and interpretability of creative assessment.
 
-## 2. Cross-Disciplinary Relevance to SSCI Fields
-
-This project holds significant relevance across various Social Sciences Citation Index (SSCI) indexed fields:
+## 2. Cross-Disciplinary Relevance
 
 *   **Design Studies/Human-Computer Interaction (HCI):** Offers a computational tool for analyzing and fostering creativity in design processes. It provides empirical methods to study design ideation, iteration, and the impact of AI feedback on design outcomes. The human-in-the-loop aspect of designers interacting with AI suggestions is central to HCI research.
 *   **Educational Technology/Pedagogy:** Provides educators with an objective, data-driven system to track students' creative development in engineering and design curricula. It facilitates personalized feedback, allowing instructors to identify specific areas for improvement in student projects and measure the effectiveness of creative teaching interventions.
