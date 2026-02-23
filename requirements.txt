@@ -1,7 +1,5 @@
---- START FILE: requirements.txt ---
-```
 absl-py==1.4.0
-accelerate==0.12.0
+accelerate==1.12.0
 access==1.1.10.post3
 affine==2.4.0
 aiofiles==24.1.0
@@ -156,7 +154,6 @@ google-ai-generativelanguage==0.6.15
 google-api-core==2.29.0
 google-api-python-client==2.190.0
 google-auth==2.47.0
-google-auth-httplib2==0.3.0
 google-auth-oauthlib==1.2.4
 google-cloud-aiplatform==1.137.0
 google-cloud-appengine-logging==1.8.0
@@ -183,37 +180,28 @@ google-cloud-speech==2.36.1
 google-cloud-storage==3.9.0
 google-cloud-trace==1.18.0
 google-cloud-translate==3.24.0
-google-colab @ file:///colabtools/dist/google_colab-1.0.0.tar.gz
 google-crc32c==1.8.0
 google-genai==1.63.0
 google-generativeai==0.8.6
 google-pasta==0.2.0
 google-resumable-media==2.5.0
 google-search-results==2.4.2
-google-transit==0.1.0
 googleapis-common-protos==1.63.0
-gpudb-model-drivers==1.1.1
-gridspec==1.1.0
 gsd==3.0.1
 Guppy3==3.1.0
-gurpy==0.1.0
 gym==0.25.2
 gym-notices==0.0.8
 hashids==1.3.1
-hashlib-extra==2.1.2
 h11==0.14.0
-httplib2==0.23.0
 humanfriendly==10.0
 humus==0.1.3
 hypercorn==0.16.0
-ihm==1.4.1
 idna==3.7
 imageio==2.34.1
 imageio-ffmpeg==0.4.9
 importlib-metadata==7.1.0
 importlib-resources==6.4.0
 inflect==7.0.0
-InMemoryPython==0.1.10
 ipycanvas==0.13.1
 ipyevents==2.0.1
 ipykernel==6.29.5
@@ -241,11 +229,9 @@ langchain==0.2.11
 langcodes==3.4.0
 langsmith==0.1.91
 lark==1.1.9
-libclang==18.1.6
 librosa==0.10.2
 lightgbm==4.4.0
 lightning-utilities==0.11.2
-lineageos==0.1.0
 linkify-it-py==2.0.2
 llvmlite==0.42.0
 loguru==0.7.2
@@ -255,11 +241,8 @@ MarkupSafe==2.1.5
 matplotlib==3.8.4
 matplotlib-inline==0.1.7
 mdit-py-plugins==0.4.0
-mecab-python3==1.0.1
 mediapy==1.1.8
 merkle-json==1.0.0
-mert-tools==0.1.1
-message-version==1.2.0
 minio==7.2.5
 ml-collections==0.1.1
 ml_dtypes==0.3.2
@@ -274,24 +257,14 @@ multipledispatch==1.0.0
 multiprocess==0.70.16
 multitasking==0.0.11
 murmurhash==1.0.10
-mylex==0.1.0
-my-package==0.0.1
-name-matching==0.1.0
 nbclient==0.10.0
 nbformat==5.10.0
-nc-time-series==1.1.0
-ncclient==0.10.0
 negspy==0.1.0
 nest-asyncio==1.6.0
 netCDF4==1.7.1
 networkx==3.3
-neurokit2==0.2.8
-ngram==0.0.1
-nltools # Removed specific version
-nmap==0.1.0
 numpy==1.26.4
 numpydoc==1.2
-numro==0.0.1
 nvgpu==0.1.0
 nvidia-cublas-cu12==12.1.3.1
 nvidia-cuda-cupti-cu12==12.1.105
@@ -308,7 +281,6 @@ nvidia-nvtx-cu12==12.1.105
 opencv-python==4.9.0.80
 openai==1.35.10
 opt-einsum==3.3.0
-oreganum==0.1.0
 p-tqdm==1.0.0
 packaging==24.1
 pandas==2.2.2
@@ -628,5 +600,3 @@ zipp==3.19.2
 zokyo==0.1.0
 zope-interface==6.2
 zrpc==0.1.0
-```
---- END FILE: requirements.txt ---
