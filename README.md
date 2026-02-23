@@ -1,6 +1,55 @@
 # CreativeThinkingTrackingTool
 # 智能穿戴创意思维追踪工具
 
+This project introduces a novel Intelligent Wearable Creative Thinking Tracking Tool, designed to quantitatively and qualitatively assess the creative thinking processes in early-stage student smart wearable designs. It achieves this by synergistically combining a custom-developed Machine Learning (ML) model with Microsoft's advanced Everything-of-Thoughts (XoT) framework. The core innovation lies in applying a hybrid AI approach to a complex, open-ended domain like design creativity, moving beyond traditional game-theoretic problems.
+
+**Key Scientific Contributions & Innovations:**
+
+*   **Hybrid AI for Creative Assessment:** First-of-its-kind integration of an ML-driven creative assessment model with a Monte Carlo Tree Search (MCTS) guided Large Language Model (LLM) framework (XoT) for iterative design thinking.
+*   **Multi-Modal Design State Representation:** Development of a conceptual `canonicalBoard` that unifies diverse design data (textual descriptions, visual elements, structured parameters) into a machine-interpretable feature vector, enabling comprehensive analysis.
+*   **Quantification of Design Creativity:** A structured approach to quantify six core dimensions of creativity (Novelty, Utility, Aesthetics, Technical Feasibility, Divergent Thinking, Integration) crucial for smart wearable design.
+*   **Iterative Design Guidance:** Leverages XoT's MCTS to explore design modification `actions` and LLM's generative capabilities to provide structured, actionable feedback and revision suggestions, fostering an iterative design cycle.
+*   **Explainable AI for Design:** The framework provides not only quantitative scores but also qualitative insights (strengths, weaknesses, recommendations) and can conceptually trace the MCTS 'thought path`, enhancing the transparency and interpretability of creative assessment.
+
+## 2. Cross-Disciplinary Relevance to SSCI Fields
+
+This project holds significant relevance across various Social Sciences Citation Index (SSCI) indexed fields:
+
+*   **Design Studies/Human-Computer Interaction (HCI):** Offers a computational tool for analyzing and fostering creativity in design processes. It provides empirical methods to study design ideation, iteration, and the impact of AI feedback on design outcomes. The human-in-the-loop aspect of designers interacting with AI suggestions is central to HCI research.
+*   **Educational Technology/Pedagogy:** Provides educators with an objective, data-driven system to track students' creative development in engineering and design curricula. It facilitates personalized feedback, allowing instructors to identify specific areas for improvement in student projects and measure the effectiveness of creative teaching interventions.
+*   **Cognitive Science of Creativity:** The XoT framework's ability to model 'thought processes' (MCTS explorations and LLM reasoning) offers a computational analogy for human creative cognition. This tool can be used to generate hypotheses and test theories about how design problems are solved creatively and how individuals respond to constructive criticism.
+*   **Innovation Studies/Management:** Provides insights into the dynamics of innovation, particularly in product development. By tracking novelty and integration, it can shed light on factors contributing to successful innovation in technology-driven domains like smart wearables.
+
+## 3. Academic Value and Methodology
+
+**Academic Value:**
+
+*   **Bridging AI and Creativity:** Addresses the long-standing challenge of computationally assessing and enhancing human creativity, offering a robust framework for future research in AI-augmented design.
+*   **Empirical Data Generation:** Lays the groundwork for generating empirical data on design iteration patterns, the impact of specific design 'actions', and the evolution of creative attributes over time.
+*   **Tool for Research & Practice:** Serves as a foundational tool for researchers studying creativity, design pedagogy, and human-AI collaboration, while also offering practical benefits for design education and R&D.
+
+**Methodology - Hybrid AI Approach:**
+
+Our methodology integrates several advanced AI paradigms:
+
+1.  **Multi-Modal Feature Engineering:** Raw design inputs (text, images, structured data) are processed by specialized encoders (NLP models for text, CNNs for images, etc.) to form a unified `canonicalBoard` feature vector. This `canonicalBoard` serves as the abstract state representation for the XoT framework.
+2.  **Reinforcement Learning (RL) with MCTS (XoT Core):** The XoT framework orchestrates a Monte Carlo Tree Search (MCTS) to explore the vast design space. MCTS iteratively selects `creative actions` (e.g., "change material", "add sensor") that modify the `canonicalBoard`, effectively simulating design evolution.
+3.  **Neural Network (NN) Policy/Value Prediction:** A custom Multi-Head Neural Network (`CreativeDesignNNet`) acts as the `NeuralNet` component within MCTS. It predicts a policy ($\pi$) over possible `creative actions` and a value ($v$) representing the estimated creative potential of a given design state (`canonicalBoard`). This guides MCTS towards promising design paths.
+4.  **Large Language Model (LLM) for Reasoning and Feedback:** An LLM is integrated to contextualize MCTS 'thoughts' (action sequences), generate natural language design descriptions, provide comprehensive key insight reports (strengths, weaknesses), and suggest specific, human-understandable recommendations for design revisions.
+5.  **Feedback Loops for Refinement:** The LLM-generated solutions are evaluated by a simulated ML-based parser that provides quantitative creative dimension scores. This feedback closes the loop, allowing the XoT framework to guide the LLM to revise designs iteratively until desired creative criteria are met.
+
+## 4. Guide for Running and Verifying the Tool
+
+To run and verify the Intelligent Wearable Creative Thinking Tracking Tool prototype, please follow these steps:
+
+**1. Clone the Repository:**
+
+Navigate to your desired directory and clone the project repository:
+
+```bash
+git clone https://github.com/microsoft/Everything-of-Thoughts-XoT.git
+cd Everything-of-Thoughts-XoT
+
 ## 项目概述
 
 本项目旨在开发一个智能工具，通过结合机器学习模型与Microsoft的Everything-of-Thoughts (XoT) 框架，对学生早期智能穿戴设计中的创意思维进行多维度追踪、评估和迭代优化。该工具能够量化评估设计的"新颖性"、"实用性"、"美观度"、"技术可行性"、"发散性思维"和"整合性"等关键维度，并提供结构化的反馈和具体的改进建议，从而辅助学生培养创新能力并优化设计流程。
