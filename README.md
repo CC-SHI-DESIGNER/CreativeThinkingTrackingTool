@@ -140,6 +140,15 @@ cd Everything-of-Thoughts-XoT
     *   一个端到端的模拟脚本，整合了上述所有自定义组件和XoT框架的核心逻辑。
     *   通过 `SimulatedXoTSolver` 类，演示了从设计提交、ML评估、MCTS驱动的"思想"生成到LLM迭代修订的完整流程。
 
+## 草图生成 & 处理功能（Sketch Processing）
+
+该模块用于加载草图并进行图像预处理，示例：
+
+```python
+from sketch_processor import preprocess_sketch
+
+processed = preprocess_sketch("example_sketch.png", show=True)
+
 ## 项目贡献
 
 本项目通过以下方式对智能穿戴设计领域的创意追踪做出贡献：
