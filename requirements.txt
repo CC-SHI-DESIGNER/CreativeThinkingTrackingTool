@@ -600,3 +600,6 @@ zipp==3.19.2
 zokyo==0.1.0
 zope-interface==6.2
 zrpc==0.1.0
+opencv-python
+matplotlib
+numpy
