@@ -1,30 +1,10 @@
-from flask import Flask, render_template, request
 import openai
 import cv2
 import numpy as np
+import matplotlib.pyplot as plt
 from PIL import Image
 
-app = Flask(__name__)
-
 openai.api_key = "your-openai-api-key"
-
-@app.route("/", methods=["GET", "POST"])
-def index():
-    if request.method == "POST":
-        description = request.form["description"]
-        uploaded_file = request.files["sketch"]
-        
-        # 分析文本
-        result_text = analyze_text(description)
-
-        # 处理草图
-        sketch_img = Image.open(uploaded_file)
-        edges = process_sketch(sketch_img)
-
-        # 显示草图结果（这部分可以在网页上显示）
-        return render_template("index.html", result_text=result_text, edges=edges)
-
-    return render_template("index.html")
 
 def analyze_text(text):
     """使用 OpenAI API 分析创意文本"""
@@ -44,5 +24,19 @@ def process_sketch(img):
     edges = cv2.Canny(gray, 100, 200)
     return edges
 
-if __name__ == "__main__":
-    app.run(debug=True)
+# 测试代码
+description = "这个设计是一个智能手表的创意。"
+result_text = analyze_text(description)
+
+print("文本分析结果:", result_text)
+
+# 示例草图处理
+uploaded_image = "your_image_path_here"  # 用上传的图片路径替换
+sketch_img = Image.open(uploaded_image)
+edges = process_sketch(sketch_img)
+
+# 显示草图边缘提取结果
+plt.imshow(edges, cmap="gray")
+plt.title("草图边缘提取")
+plt.axis("off")
+plt.show()
